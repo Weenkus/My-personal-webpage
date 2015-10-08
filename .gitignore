@@ -15,3 +15,6 @@
 /log/*
 !/log/.keep
 /tmp
+
+# Ignore Spring files so it dosen't conflict with Guard files on git
+/spring/*.pid
