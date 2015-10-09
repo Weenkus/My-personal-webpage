@@ -9,10 +9,46 @@
     <%= render 'layouts/shim' %>
   </head>
   <body>
-    <%= render 'layouts/header' %>
-    <div class="container">
-      <%= yield %>
-      <%= render 'layouts/footer' %>
+
+	<!-- Header -->
+	<div class="row top-buffer"> 
+		<%= link_to "Vinko Kodžoman", root_path, id: "mainHeading" %>
+	</div>
+	
+	<!-- Main container -->
+	<div class="row-fluid"></div>
+		<%= render 'layouts/header' %>
+		
+		<!-- Central Content -->
+		<div id = "centerPanel" >
+			
+			<div class="col-sm-9 col-md-6 col-lg-1"></div>  
+			
+			<!-- Left Column -->
+			<div class="col-sm-9 col-md-6 col-lg-8">
+				<!-- Page Content -->
+				<%= yield %>
+			</div>   
+			
+			<div class="col-sm-9 col-md-6 col-lg-1"></div> 
+			
+			<!-- Right Column -->
+			<div class="col-sm-3 col-md-6 col-lg-2">
+				<div class="circular">
+					<!--<%= image_tag("vinko.jpg", :alt => "Vinko img", :height=>"160", :width=>"215") %>-->
+				</div>
+				
+				<span class="smallHeadings">About Vinko</span>
+				<p>Vinko is a student studying software engineering on the Faculty of Electrial Engineering and Computing in Zagreb.</p>
+			</div>
+		
+		</div>
+		
+		<!-- Footer -->
+		<div class="container">
+			<%= render 'layouts/footer' %>
+		</div>
+		
     </div>
   </body>
 </html>
