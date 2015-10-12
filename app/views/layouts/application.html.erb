@@ -19,6 +19,11 @@
 	<div class="row-fluid"></div>
 		<%= render 'layouts/header' %>
 		
+		<!-- Print the success, info, danger... messages.  -->
+		<% flash.each do |message_type, message| %>
+			<div class="alert alert-<%= message_type %>"><%= message %></div>
+		<% end %>
+		
 		<!-- Central Content -->
 		<div id = "centerPanel" >
 			
